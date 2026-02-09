@@ -7,23 +7,16 @@
 
 </head>
 <body>
-    <!-- Checkbox -->
-    <label>
-    <input type="checkbox" name="subscribe" />
-    Subscribe to newsletter
-    </label>
-
-    <!-- Radio buttons -->
-    <label><input type="radio" name="gender" value="male" /> Male</label>
-    <label><input type="radio" name="gender" value="female" /> Female</label>
-
-    <!-- Date -->
-    <input type="date" name="birthday" />
-
-    <!-- File upload -->
-    <input type="file" name="resume" />
-
-    <!-- Submit button -->
-    <input type="submit" value="Send" />
+    <input id="nameInput" type="text" placeholder="Type your name..." />
+    <p>Hello, <span id="output">---</span></p>
+    <button id="btn">Show</button>
 </body>
+<script>
+    const input = document.getElementById("nameInput");
+    const output = document.getElementById("output");
+
+    document.getElementById("btn").addEventListener("click", () => {
+        output.textContent = input.value || "---";
+    });
+</script>
 </html>
