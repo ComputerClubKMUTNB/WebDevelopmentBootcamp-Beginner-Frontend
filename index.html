@@ -7,16 +7,12 @@
 
 </head>
 <body>
-    <input id="nameInput" type="text" placeholder="Type your name..." />
     <p>Hello, <span id="output">---</span></p>
-    <button id="btn">Show</button>
+    <button id="btn" onclick="showHandler()">Show</button>
 </body>
 <script>
-    const input = document.getElementById("nameInput");
-    const output = document.getElementById("output");
-
-    document.getElementById("btn").addEventListener("click", () => {
-        output.textContent = input.value || "---";
-    });
+    function showHandler(){
+        output.textContent = "<b>Computer Club</b>";
+    }
 </script>
 </html>
