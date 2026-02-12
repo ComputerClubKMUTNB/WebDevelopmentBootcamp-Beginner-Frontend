@@ -7,13 +7,18 @@
 
 </head>
 <body>
-    <input id="nameInput" type="text" placeholder="Type your name..." />
+    <button id="btn" onclick="buttonHandler()">Call localhost:3000 api</button>
 </body>
 <script>
-    const input = document.getElementById("nameInput");
-
-    input.addEventListener("input", () => {
-        console.log('input.value :>> ', input.value);
-    });
+    const apiUrl = 'http://localhost:3000/items';
+    function buttonHandler(){
+        fetch(apiUrl)
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            console.log('data :>> ', data);
+        })
+    }
 </script>
 </html>
