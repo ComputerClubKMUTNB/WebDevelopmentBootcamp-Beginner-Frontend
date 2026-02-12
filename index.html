@@ -7,7 +7,14 @@
 
 </head>
 <body>
-    <button id="btn" onclick="buttonHandler()">Call localhost:3000 api</button>
+    <h1>CRUD Application</h1>
+
+    <h3>Add Item</h3>
+    <input type="text" id="itemName" placeholder="Item name" />
+    <button onclick="addItem()">Add</button>
+
+    <h3>Items List</h3>
+    <ul id="itemsList"></ul>
     <script src="app.js" defer></script>
 </body>
 </html>
