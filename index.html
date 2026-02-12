@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebDev Frontend</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>CRUD Application</h1>
 
-    <h3>Add Item</h3>
-    <input type="text" id="itemName" placeholder="Item name" />
-    <button onclick="addItem()">Add</button>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+    <div class="mx-auto max-w-2xl p-6">
+        <h1 class="text-3xl font-bold mb-6">CRUD Application</h1>
 
-    <h3>Items List</h3>
-    <ul id="itemsList"></ul>
+        <div class="bg-white rounded-xl shadow-sm ring-1 ring-slate-200 p-6">
+            <h3 class="text-lg font-semibold mb-3">Add Item</h3>
+
+            <div class="flex gap-3">
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="Item name"
+                    class="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm
+                            focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400"
+                />
+
+                <button
+                    onclick="addItem()"
+                    class="rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white
+                            hover:bg-sky-700 active:bg-sky-800"
+                >
+                Add
+                </button>
+            </div>
+
+            <h3 class="text-lg font-semibold mt-6 mb-3">Items List</h3>
+            <ul id="itemsList" class="space-y-2"></ul>
+        </div>
+    </div>
+
     <script src="app.js" defer></script>
 </body>
 </html>
