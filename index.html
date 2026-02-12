@@ -8,17 +8,6 @@
 </head>
 <body>
     <button id="btn" onclick="buttonHandler()">Call localhost:3000 api</button>
+    <script src="app.js" defer></script>
 </body>
-<script>
-    const apiUrl = 'http://localhost:3000/items';
-    function buttonHandler(){
-        fetch(apiUrl)
-        .then((response) => {
-            return response.json()
-        })
-        .then((data) => {
-            console.log('data :>> ', data);
-        })
-    }
-</script>
 </html>
