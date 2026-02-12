@@ -9,9 +9,20 @@ function fetchItems() {
             list.innerHTML = '';
             data.forEach((item) => {
                 const li = document.createElement('li');
-                li.innerHTML = `${item.name}
-                <button onclick="editItem(${item.id})">Edit</button>
-                <button onclick="deleteItem(${item.id})">Delete</button>`;
+
+                li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+                li.innerHTML = `
+                <span class="fw-medium">${item.name}</span>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Item actions">
+                    <button class="btn btn-outline-secondary" onclick="editItem(${item.id})" title="Edit">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-outline-danger" onclick="deleteItem(${item.id})" title="Delete">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+                `;
                 list.appendChild(li);
             });
         });
