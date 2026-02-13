@@ -1,4 +1,6 @@
-const apiUrl = process.env.API_URL || 'http://localhost:3000';
+// const apiUrl = 'http://localhost:3000';
+const apiUrl = import.meta.env.API_URL || 'http://localhost:3000';
+console.log(apiUrl);
 
 function fetchItems() {
     fetch(apiUrl + "/items")
@@ -69,3 +71,6 @@ function deleteItem(id) {
 
 // Initialize
 window.onload = fetchItems;
+window.addItem = addItem;
+window.editItem = editItem;
+window.deleteItem = deleteItem;
