@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000';
+const apiUrl = process.env.API_URL || 'http://localhost:3000';
 
 function fetchItems() {
     fetch(apiUrl + "/items")
